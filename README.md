@@ -1,10 +1,10 @@
 # Dashboard Spotify Ricardo Legaspi
 
+Una aplicación web interactiva que compara las preferencias musicales entre **Techno** y **Psychedelic Trance** de diferentes países y periodos de tiempo.
+
 [![Vercel](https://img.shields.io/badge/deployed_on-vercel-black?style=for-the-badge&logo=vercel)](https://dashboard-spotify-ashen.vercel.app/)
 [![React](https://img.shields.io/badge/react-18.2.0-blue?style=for-the-badge&logo=react)](https://reactjs.org)
 [![TypeScript](https://img.shields.io/badge/typescript-5.0.0-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org)
-
-Una aplicación web interactiva que compara las preferencias musicales entre **Techno** y **Psychedelic Trance** de diferentes países y periodos de tiempo.
 
 ##  Características
 
@@ -47,7 +47,7 @@ Una aplicación web interactiva que compara las preferencias musicales entre **T
 
 ## Pasos Para Instalación Local
 
-### Prerrequisitos IMPORTANTES
+### REQUISITOS IMPORTANTES
 - Node.js 16+ 
 - Cuenta de [Spotify Developer](https://developer.spotify.com/)
 
