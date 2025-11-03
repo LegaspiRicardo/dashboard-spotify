@@ -33,18 +33,18 @@ const CountryFilter: React.FC<CountryFilterProps> = ({
             {loading ? 'Cargando datos...' : `País actual: ${COUNTRIES[selectedCountry].name}.`}
           </p>
         </div>
-
         <div
           role="radiogroup"
           aria-labelledby="country-filter-description"
           aria-describedby="country-instructions"
-          className="grid grid-cols-2 md:flex md:flex-row gap-3 mx-auto w-full md:w-auto" // ← CORREGIDO
+          className="grid grid-cols-2 md:flex md:flex-row gap-3 mx-auto w-full md:w-auto" 
         >
           {/* Instrucciones para lectores de pantalla */}
           <div id="country-instructions" className="sr-only">
             Grupo de opciones de paises. Use las flechas izquierda y derecha para navegar 
             entre los paises: {COUNTRIES[selectedCountry].name}
           </div>
+          
           
           {countries.map(([code, country]) => (
             <button
@@ -54,7 +54,7 @@ const CountryFilter: React.FC<CountryFilterProps> = ({
               aria-checked={selectedCountry === code}
               aria-label={`${country.name} ${selectedCountry === code ? 'seleccionado' : 'no seleccionado'}. ${country.name === 'Global' ? 'Datos generales de todos los países' : `Datos específicos de ${country.name}`}`}
               aria-describedby={`country-desc-${code}`}
-              className={`px-4 py-3 rounded-xl text-sm font-medium transition-all w-full md:w-auto border-2 focus:outline-none focus:ring-4 focus:ring-spotify-green focus:ring-opacity-50 ${
+              className={`px-4 py-3 rounded-xl text-sm font-medium transition-all w-full md:w-auto border-2 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-50 ${
                 selectedCountry === code 
                   ? 'bg-gray-600 text-white border-white shadow-lg transform scale-105' 
                   : 'bg-transparent text-gray-300 border-gray-600 hover:bg-gray-700 hover:text-white hover:border-gray-500'
@@ -108,6 +108,9 @@ const CountryFilter: React.FC<CountryFilterProps> = ({
             </button>
           ))}
         </div>
+        
+
+        <p className='text-center text-gray-400'>Selecciona una opción.</p> 
       </div>
     </Card>
   );
