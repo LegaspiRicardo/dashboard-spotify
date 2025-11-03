@@ -13,16 +13,16 @@ Una aplicación web interactiva que compara las preferencias musicales entre **T
 - **Métricas clave**: Popularidad, reproducciones, tracks más escuchados
 - **Datos en tiempo real** desde Spotify API
 
-### 🌍 Análisis por Países
+###  Análisis por Países
 - **Brasil, Alemania, México y Global**
 - **Estadísticas** por mercado musical
 
-### 📊 Visualizaciín Interactiva
+###  Visualizaciín Interactiva
 - **Gráficas trimestrales** con reproducciones semanales
 - **Tooltips informativos** en todas las visualizaciones
 - **Vista móvil** con swiper para navegación táctil
 
-### 🎛️ Controles de Usuario
+###  Controles de Usuario
 - **Selector de país** 
 - **Toggle entre géneros** 
 - **Diseño 100% responsivo** 
@@ -72,3 +72,32 @@ npm run dev
 
 6. **Abrir en navegador**
 http://localhost:5173
+
+
+##  Uso de la aplicación
+1.  Selección de País.
+    Elige entre Brasil, Alemania, México o Global
+    La información se actualiza automáticamente.
+
+2.  Vista de Resultados
+    Métricas principales de ambos generos
+    Top tracks actuales por popularidad
+    Comparación visual
+
+3.  Analisis Trimestral
+    Navega entre los trimestres del año
+    Toogle para cambiar de generos en cada trimestre
+    Grafica de barras con reproducciones semanales
+    Tooltips con información
+
+
+##  Limitaciones Conocidas
+La API pública de Spotify no expone:
+-  Estadísticas de reproducciones históricas reales
+-  Datos de market share por género oficiales
+-  Métricas de streaming históricas por región
+-  Información demográfica de listeners
+
+Consideraciones Técnicas
+-  Datos trimestrales son proyecciones basadas en popularidad actual
+-  Rate limiting de la API puede afectar carga en horas pico
