@@ -1,5 +1,7 @@
 import React from 'react';
 
+import GridScanBackground from '../ui/GridScanBackground';
+
 interface LayoutProps {
   children: React.ReactNode;
 }
@@ -7,7 +9,7 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="min-h-screen overflow-x-hidden">
-
+          <GridScanBackground />
       <main className="container mx-auto px-6 py-8 max-w-full">
         {children}
       </main>

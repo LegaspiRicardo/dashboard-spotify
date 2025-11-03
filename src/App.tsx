@@ -105,11 +105,18 @@ function App() {
     <Layout>
       <div className="p-0 space-y-6 overflow-x-hidden ">
         {/* Sección Hero */}
-        <div className="text-center">
-          <p className='hidden'>Dashboard comparativo de música electronica.</p>
-          <h1 className="text-4xl font-bold text-white mb-2">TECHNO vs PSYTRANCE.</h1>
-          <p className="text-gray-400" aria-hidden="true"> Comparativa de reproducciones en Spotify Music.</p>
-        </div>
+        <section className="relative min-h-[40vh] flex items-center justify-center overflow-hidden rounded-xl ">
+          
+          <div className="relative z-10 text-center px-4">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+              TECHNO <span className="text-gray-400">vs</span> PSYTRANCE
+            </h1>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Análisis comparativo de reproducciones en Spotify Music
+            </p>
+
+          </div>
+        </section>
 
         {/* Filtro de países */}
         <CountryFilter
@@ -167,7 +174,7 @@ function App() {
                 <div className="text-gray-400 text-sm">Tracks TECHNO</div>
               </div>
               <div className="text-center p-4 bg-gray-700 rounded-lg">
-                <div className="text-2xl font-bold text-red-400">{psytranceStats.trackCount}</div>
+                <div className="text-2xl font-bold text-purple-500">{psytranceStats.trackCount}</div>
                 <div className="text-gray-400 text-sm">Tracks PSYTRANCE</div>
               </div>
               <div className="text-center p-4 bg-gray-700 rounded-lg">
@@ -175,7 +182,7 @@ function App() {
                 <div className="text-gray-400 text-sm">Popularidad TECHNO</div>
               </div>
               <div className="text-center p-4 bg-gray-700 rounded-lg">
-                <div className="text-2xl font-bold text-red-400">{psytranceStats.avgPopularity}</div>
+                <div className="text-2xl font-bold text-purple-500">{psytranceStats.avgPopularity}</div>
                 <div className="text-gray-400 text-sm">Popularidad PSYTRANCE</div>
               </div>
             </div>

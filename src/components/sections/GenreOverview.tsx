@@ -8,11 +8,12 @@ interface GenreOverviewProps {
 
 const GenreOverview: React.FC<GenreOverviewProps> = ({ stats }) => {
   return (
-    <Card>
+    <Card className='pt-16'>
       <p className='hidden'>Sección canciones más escuchadas.. TOP 10, canciones de</p>
-      <h2 className="text-2xl font-bold text-white mb-4">{stats.name}.</h2>
+      <h2 className="text-2xl font-bold text-white ">{stats.name}.</h2>
       <div>
         <div className="space-y-2">
+          <h4 className='mb-4 text-gray-400'>Top 10 canciones más escuchadas.</h4>
           {stats.topTracks.slice(0, 10).map((track, index) => (
             <div key={track.id} className="flex items-center justify-between p-2 bg-gray-800 rounded">
               <div className="flex items-center space-x-3">

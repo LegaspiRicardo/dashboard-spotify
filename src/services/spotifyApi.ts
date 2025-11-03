@@ -65,11 +65,11 @@ class SpotifyAPI {
         this.accessToken = data.access_token;
         this.tokenExpiration = Date.now() + (data.expires_in * 1000) - 60000; // 1 minuto antes
 
-        console.log('✅ Token de Spotify obtenido exitosamente');
+        console.log(' Token de Spotify obtenido exitosamente');
 
 
       } catch (error) {
-        console.error(`❌ Intento ${attempt} de autenticación falló:`, error);
+        console.error(` Intento ${attempt} de autenticación falló:`, error);
         
         if (attempt === this.retryAttempts) {
           this.accessToken = null;
@@ -126,7 +126,7 @@ class SpotifyAPI {
 
           // Manejo específico de errores HTTP
           if (response.status === 401 && retryOnAuthError) {
-            console.log('🔄 Token expirado, renovando...');
+            console.log(' Token expirado, renovando...');
             this.accessToken = null;
             this.tokenExpiration = null;
             continue; // Reintentar con nuevo token
@@ -135,7 +135,7 @@ class SpotifyAPI {
           if (response.status === 429) {
             const retryAfter = response.headers.get('Retry-After');
             const waitTime = retryAfter ? parseInt(retryAfter) * 1000 : 1000 * attempt;
-            console.log(`⏳ Rate limit, esperando ${waitTime}ms...`);
+            console.log(` Rate limit, esperando ${waitTime}ms...`);
             await new Promise(resolve => setTimeout(resolve, waitTime));
             continue;
           }
@@ -154,7 +154,7 @@ class SpotifyAPI {
           }
 
         } catch (error) {
-          console.error(`❌ Intento ${attempt} falló para ${endpoint}:`, error);
+          console.error(` Intento ${attempt} falló para ${endpoint}:`, error);
           
           if (attempt === this.retryAttempts) {
             throw error;
@@ -196,7 +196,7 @@ async getTracksByGenre(
     limit: number = 50
   ): Promise<Track[]> {
     try {
-      console.log(`🎵 Buscando tracks de "${genre}" en ${market}`);
+      console.log(` Buscando tracks de "${genre}" en ${market}`);
 
       // Términos de búsqueda  por género
       const searchTerms: Record<string, string> = {
@@ -218,7 +218,7 @@ async getTracksByGenre(
 
       const tracks = response.tracks.items;
       
-      console.log(`✅ Encontrados ${tracks.length} tracks de ${genre} en ${market}`);
+      console.log(` Encontrados ${tracks.length} tracks de ${genre} en ${market}`);
       
       // Log de sample para debugging
       if (tracks.length > 0) {
@@ -232,7 +232,7 @@ async getTracksByGenre(
       return tracks;
 
     } catch (error) {
-      console.error(`❌ Error buscando ${genre} en ${market}:`, error);
+      console.error(` Error buscando ${genre} en ${market}:`, error);
       throw new Error(
         `No se pudieron obtener tracks de ${genre} para ${market}: ${error instanceof Error ? error.message : 'Error desconocido'}`
       );
@@ -275,7 +275,7 @@ async getTracksByGenre(
 
       return response;
     } catch (error) {
-      console.error(`❌ Error searching playlists for "${query}":`, error);
+      console.error(` Error searching playlists for "${query}":`, error);
       throw new Error(
         `No se pudieron buscar playlists: ${error instanceof Error ? error.message : 'Error desconocido'}`
       );
@@ -317,7 +317,7 @@ async getTracksByGenre(
     this.accessToken = null;
     this.tokenExpiration = null;
     this.requestQueue.clear();
-    console.log('🧹 Cache de autenticación limpiado');
+    console.log(' Cache de autenticación limpiado');
   }
 }
 
@@ -337,11 +337,10 @@ const finalClientSecret = clientSecret || '';
 // Validación temprana de credenciales (solo warning, no error)
 if (!clientId || !clientSecret) {
   console.warn(
-    '⚠️  Credenciales de Spotify faltantes!\n' +
+    'Hacen falta las Credenciales de Spotifys!\n' +
     'Por favor agrega al archivo .env:\n' +
     'VITE_SPOTIFY_CLIENT_ID=tu_client_id\n' + 
-    'VITE_SPOTIFY_CLIENT_SECRET=tu_client_secret\n' +
-    'La aplicación funcionará pero no podrá cargar datos de Spotify.'
+    'VITE_SPOTIFY_CLIENT_SECRET=tu_client_secret\n' 
   );
 }
 
