@@ -106,8 +106,9 @@ function App() {
       <div className="p-0 space-y-6 ">
         {/* Sección Hero */}
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-2">TECHNO vs PSYTRANCE</h1>
-          <p className="text-gray-400"> Comparativa de reproducciones en Spotify Music</p>
+          <p className='hidden'>Dashboard comparativo de música electronica.</p>
+          <h1 className="text-4xl font-bold text-white mb-2">TECHNO vs PSYTRANCE.</h1>
+          <p className="text-gray-400" aria-hidden="true"> Comparativa de reproducciones en Spotify Music.</p>
         </div>
 
         {/* Filtro de países */}
@@ -128,10 +129,10 @@ function App() {
         <div className=' py-8 rounded-xl bg-gray-800'>
           <div className='w-10/12 mx-auto md:pb-8 sm:pb-0 text-center'>
             <h2 className="text-gray-400 text-center text-2xl font-bold">
-              Reproducciones totales en{' '}
+              Reproducciones totales en:{' '} <span className='hidden'>.</span>
             </h2>
             <span className='font-bold text-4xl uppercase '>
-              {COUNTRIES[selectedCountry]?.name || 'Global'}
+              {COUNTRIES[selectedCountry]?.name || 'Global'}.
             </span>
           </div>
           {quarterlyData.length > 0 ? (

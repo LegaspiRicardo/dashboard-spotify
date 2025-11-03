@@ -31,8 +31,9 @@ export const CountryPieChart: React.FC<CountryPieChartProps> = ({ countryData })
 
     return (
         <Card className="p-6 shadow-xl  bg-gray-800">
+            <p className='hidden'>Promedio de reproducciones según su genero. </p>
             <h2 className="text-2xl font-bold text-center mb-6 text-gray-400">
-                Preferencias en <span className='text-white text-4xl font-bold'>{country.country}</span>
+                Preferencias en <span className='text-white text-4xl font-bold'>{country.country}.</span>
             </h2>
 
             <div className="md:flex flex-row items-center">
@@ -84,10 +85,10 @@ export const CountryPieChart: React.FC<CountryPieChartProps> = ({ countryData })
                                 className="w-4 h-4 rounded-full mr-3"
                                 style={{ backgroundColor: genreColors.TECHNO }}
                             ></div>
-                            <span className="text-gray-300 font-medium uppercase">Techno</span>
+                            <span className="text-gray-300 font-medium uppercase">Techno:</span>
                         </div>
                         <span className="text-white font-bold text-lg">
-                            {country.percentage?.TECHNO.toFixed(1)}%
+                            {country.percentage?.TECHNO.toFixed(1)}%.
                         </span>
                     </div>
                     <div className="flex justify-between items-center p-3 bg-gray-700 rounded-lg ">
@@ -96,10 +97,10 @@ export const CountryPieChart: React.FC<CountryPieChartProps> = ({ countryData })
                                 className="w-4 h-4 rounded-full mr-3"
                                 style={{ backgroundColor: genreColors.PSYTRANCE }}
                             ></div>
-                            <span className="text-gray-300 font-medium uppercase">Psytrance</span>
+                            <span className="text-gray-300 font-medium uppercase">Psytrance:</span>
                         </div>
                         <span className="text-white font-bold text-lg">
-                            {country.percentage?.PSYTRANCE.toFixed(1)}%
+                            {country.percentage?.PSYTRANCE.toFixed(1)}%.
                         </span>
                     </div>
                 </div>

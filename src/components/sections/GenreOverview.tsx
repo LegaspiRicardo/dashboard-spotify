@@ -9,22 +9,25 @@ interface GenreOverviewProps {
 const GenreOverview: React.FC<GenreOverviewProps> = ({ stats }) => {
   return (
     <Card>
-      <h2 className="text-2xl font-bold text-white mb-4">{stats.name} </h2>
+      <p className='hidden'>Sección canciones más escuchadas.. TOP 10, canciones de</p>
+      <h2 className="text-2xl font-bold text-white mb-4">{stats.name}.</h2>
       <div>
         <div className="space-y-2">
           {stats.topTracks.slice(0, 10).map((track, index) => (
             <div key={track.id} className="flex items-center justify-between p-2 bg-gray-800 rounded">
               <div className="flex items-center space-x-3">
                 <span className="text-gray-400 w-6">{index + 1}.</span>
-                <img 
-                  src={track.album.images[2]?.url} 
+                <img
+                  src={track.album.images[2]?.url}
                   alt={track.album.name}
                   className="w-10 h-10 rounded"
                 />
                 <div>
-                  <p className="text-white font-medium">{track.name}</p>
+                  <p className='hidden'>Canción:</p>
+                  <p className="text-white font-medium">{track.name}.</p>
+                  <p className='hidden'>Artista:</p>
                   <p className="text-gray-400 text-sm">
-                    {track.artists.map(artist => artist.name).join(', ')}
+                    {track.artists.map(artist => artist.name).join(', ')}.
                   </p>
                 </div>
               </div>
