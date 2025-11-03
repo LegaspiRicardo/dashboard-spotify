@@ -177,6 +177,17 @@ class SpotifyAPI {
   }
 
   /**
+ * Obtiene tracks por género (alias para getTracksByGenreAndMarket)
+ */
+async getTracksByGenre(
+  genre: string, 
+  market: string = 'US', 
+  limit: number = 50
+): Promise<Track[]> {
+  return this.getTracksByGenreAndMarket(genre, market, limit);
+}
+
+  /**
    * Busca tracks por género y mercado 
    */
   async getTracksByGenreAndMarket(

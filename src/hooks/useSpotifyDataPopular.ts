@@ -41,19 +41,19 @@ export const useSpotifyDataPopular = () => {
     };
   };
 
-  // Función para obtener tracks populares por género
+  // Función para obtener tracks populares por género - CORREGIDA
   const getPopularTracksByGenre = async (
     genre: string,
     limit: number = 20
   ): Promise<Track[]> => {
     try {
-      // Buscar más tracks para tener de donde filtrar
-      const response = await spotifyAPI.searchTracks(`genre:"${genre}"`, 100);
+      // Buscar más tracks para tener de donde filtrar - CORREGIDO
+      const tracks = await spotifyAPI.searchTracks(`genre:"${genre}"`, "US", 100);
 
-      // Filtrar tracks con alta popularidad y ordenar
-      const popularTracks = response.tracks.items
-        .filter((track) => track.popularity > 50) // Solo tracks con popularidad > 50
-        .sort((a, b) => b.popularity - a.popularity)
+      // Filtrar tracks con alta popularidad y ordenar - CORREGIDO
+      const popularTracks = tracks
+        .filter((track: Track) => track.popularity > 50) // Solo tracks con popularidad > 50
+        .sort((a: Track, b: Track) => b.popularity - a.popularity)
         .slice(0, limit);
 
       console.log(`🎯 ${genre} - Found ${popularTracks.length} popular tracks`);
