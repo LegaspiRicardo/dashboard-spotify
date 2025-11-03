@@ -88,7 +88,7 @@ const QuarterlyOverview: React.FC<QuarterlyOverviewProps> = ({ quarterlyData }) 
                             >
                                 {/* Header del trimestre */}
                                 <div className="text-center">
-                                    <p className="text-white text-lg">{monthRange}</p>
+                                    <p className="text-white text-xl font-bold">{monthRange}</p>
                                     <p className="text-gray-400 text-sm"> {currentData.totalPlays.toLocaleString()} reproducciones</p>
                                 </div>
 

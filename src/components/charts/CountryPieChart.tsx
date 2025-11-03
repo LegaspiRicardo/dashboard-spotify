@@ -77,7 +77,7 @@ export const CountryPieChart: React.FC<CountryPieChartProps> = ({ countryData })
                 </div>
 
                 {/* Estadísticas  */}
-                <div className="space-y-3 text-sm w-full max-w-xs mb-12">
+                <div className="space-y-3 text-sm w-full mx-auto max-w-xs mb-12">
                     <div className="flex justify-between items-center p-3 bg-gray-700 rounded-lg">
                         <div className="flex items-center">
                             <div

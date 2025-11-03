@@ -125,7 +125,7 @@ function App() {
         </div>
 
         {/* Gráficas trimestrales */}
-        <div className=' pt-8 rounded-xl bg-gray-800'>
+        <div className=' py-8 rounded-xl bg-gray-800'>
           <div className='w-10/12 mx-auto md:pb-8 sm:pb-0 text-center'>
             <h2 className="text-gray-400 text-center text-2xl font-bold">
               Reproducciones totales en{' '}
@@ -145,6 +145,7 @@ function App() {
               </p>
             </div>
           )}
+          <p className='text-sm text-center text-gray-400 md:hidden'>Desliza hacia los lados para ver más</p>
         </div>
 
         {/* Overview detallado de géneros  */}
