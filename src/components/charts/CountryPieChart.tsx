@@ -30,7 +30,7 @@ export const CountryPieChart: React.FC<CountryPieChartProps> = ({ countryData })
     }
 
     return (
-        <Card className="p-6 shadow-xl  bg-slate-800">
+        <Card className="p-6 shadow-xl  bg-gray-800">
             <h2 className="text-2xl font-bold text-center mb-6 text-gray-400">
                 Preferencias en <span className='text-white text-4xl font-bold'>{country.country}</span>
             </h2>
