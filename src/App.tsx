@@ -103,7 +103,7 @@ function App() {
 
   return (
     <Layout>
-      <div className="p-0 space-y-6 ">
+      <div className="p-0 space-y-6 overflow-x-hidden ">
         {/* Sección Hero */}
         <div className="text-center">
           <p className='hidden'>Dashboard comparativo de música electronica.</p>

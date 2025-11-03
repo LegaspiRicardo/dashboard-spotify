@@ -6,9 +6,9 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="min-h-screen ">
+    <div className="min-h-screen overflow-x-hidden">
 
-      <main className="container mx-auto px-6 py-8">
+      <main className="container mx-auto px-6 py-8 max-w-full">
         {children}
       </main>
       <footer className="bg-gray-800 border-t border-gray-700 mt-12">
