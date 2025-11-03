@@ -55,40 +55,42 @@ Una aplicación web interactiva que compara las preferencias musicales entre **T
 
 1. **Clonar el repositorio**
 git clone https://github.com/LegaspiRicardo/dashboard-spotify.git
+
+2. **Acceder al proyecto**
 cd dashboard-spotify
 
-2. **Instalar dependencias**
+3. **Instalar dependencias**
 npm install
 
-3. **Configurar variables de entorno**
+4. **Configurar variables de entorno**
 crear archivo .env
 
-4. **Configurar credenciales de Spotify**
+5. **Configurar credenciales de Spotify**
 VITE_SPOTIFY_CLIENT_ID=tu_client_id_spotify
 VITE_SPOTIFY_CLIENT_SECRET=tu_client_secret_spotify
 
-5. **Ejecutar en desarrollo**
+6. **Ejecutar en desarrollo**
 npm run dev
 
-6. **Abrir en navegador**
+7. **Abrir en navegador**
 http://localhost:5173
 
 
 ##  Uso de la aplicación
 1.  Selección de País.
-    Elige entre Brasil, Alemania, México o Global
-    La información se actualiza automáticamente.
+-    Elige entre Brasil, Alemania, México o Global
+-    La información se actualiza automáticamente.
 
 2.  Vista de Resultados
-    Métricas principales de ambos generos
-    Top tracks actuales por popularidad
-    Comparación visual
+-    Métricas principales de ambos generos
+-    Top tracks actuales por popularidad
+-    Comparación visual
 
 3.  Analisis Trimestral
-    Navega entre los trimestres del año
-    Toogle para cambiar de generos en cada trimestre
-    Grafica de barras con reproducciones semanales
-    Tooltips con información
+-    Navega entre los trimestres del año
+-    Toogle para cambiar de generos en cada trimestre
+-    Grafica de barras con reproducciones semanales
+-    Tooltips con información
 
 
 ##  Limitaciones Conocidas
