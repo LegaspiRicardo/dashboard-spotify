@@ -41,7 +41,7 @@ export const useGenres = (genres: string[]) => {
         setError(null);
 
         const genrePromises = genres.map(genre => 
-          spotifyAPI.getTracksByGenre(genre, 20)
+          spotifyAPI.getTracksByGenre(genre, 'US' ,20)
         );
 
         const results = await Promise.all(genrePromises);
