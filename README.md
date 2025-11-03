@@ -103,3 +103,15 @@ La API pública de Spotify no expone:
 Consideraciones Técnicas
 -  Datos trimestrales son proyecciones basadas en popularidad actual
 -  Rate limiting de la API puede afectar carga en horas pico
+
+
+##  Demostración Visual
+
+### Página Principal
+![Desktop View](./src/public/images/appdesktop.png)
+
+### Experiencia Multi-dispositivo
+
+| Desktop | Mobile | Tablet |
+|---------|--------|--------|
+| <img src="./src/public/images/appdesktop.png" width="250"> | <img src="./src/public/images/appmobile.png" width="150"> | <img src="./src/public/images/apptablets.png" width="200"> |
