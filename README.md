@@ -17,7 +17,7 @@ Una aplicación web interactiva que compara las preferencias musicales entre **T
 - **Brasil, Alemania, México y Global**
 - **Estadísticas** por mercado musical
 
-###  Visualizaciín Interactiva
+###  Visualización Interactiva
 - **Gráficas trimestrales** con reproducciones semanales
 - **Tooltips informativos** en todas las visualizaciones
 - **Vista móvil** con swiper para navegación táctil
